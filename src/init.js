@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.dancersSouthpark = [];
 
   let tickSpeed = 500;
 
@@ -9,7 +10,7 @@ $(document).ready(function() {
   $('.lineUpDancersButton').on('click', function(event) {
     let top = 25,
       left = 25;
-    window.dancers.forEach(dancerObj =>  {
+    window.dancersSouthpark.forEach(dancerObj =>  {
       dancerObj['cartman'].lineUp(left, top);
       left += 100;
       dancerObj['kenny'].lineUp(left, top);
@@ -17,6 +18,7 @@ $(document).ready(function() {
 
     });
   });
+
   $('.addDancerButton').on('click', function(event) {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
       // make a dancer with a random position
@@ -33,11 +35,12 @@ $(document).ready(function() {
 
     $('body').append(cartman.$node, kenny.$node);
 
-    window.dancers.push({cartman : cartman, kenny : kenny});
+    window.dancersSouthpark.push({cartman : cartman, kenny : kenny});
 
-    // });
+  });
+
   $('.addBreakDancerButton').on('click', function(event) {
-    // debugger;
+    debugger;
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
