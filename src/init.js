@@ -1,6 +1,16 @@
 $(document).ready(function() {
-  //stawindow.dancers = [];
+  window.dancers = [];
 
+  let offset = 0;
+  $('.lineUpDancersButton').on('click', function(event) {
+    window.dancers.forEach(dancer =>  {
+
+      // debugger;
+      let position = $('#hackReactor-name').position();
+      dancer.lineUp(position.left + offset, position.top + 5);
+      offset += 55;
+    });
+  });
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -28,6 +38,7 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 });
 

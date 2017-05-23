@@ -6,12 +6,31 @@ body{
   background-color:#444;
   font-size: 18px;
 }
+img {
+    height: 100px;
+    width: 100px;
+    border: 1px solid;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    font-weight: bold;
+}
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUpDancersButton {
   padding:5px 12px;
   float:right;
+}
+#hackReactor-name {
+    width:1000px;
+    margin: auto;
+    margin-top: 100px;
+    font-size: 9em;
+    padding-left: 115px;
+
 }
 .topbar{
   height:32px;
