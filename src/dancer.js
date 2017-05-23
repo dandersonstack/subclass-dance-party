@@ -3,7 +3,8 @@ var Dancer = function(top, left, timeBetweenSteps) {
   // use jQuery to create an HTML <span> tag
   // this.$node = $('<span class="dancer"></span>');
   this.$node = $('<img src="img/cartman.png"/>');
-  debugger
+  // this.$node = $('<div class="dancer"></div>');
+  // debugger
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -23,14 +24,43 @@ Dancer.prototype.lineUp = function(left, top) { // expects a jquery element
   // debugger;
 
   this.$node.animate({
-    opacity: 0.25,
+    // opacity: 0.25,
     left: left,
-    top: top,
-    height: "toggle"
-  }, 3000, function() {
-    // Animation complete.
+    top: top
+    // height: "toggle"
+  }, 3000, () => {
+    this.tilt('left');
   });
 
+};
+
+Dancer.prototype.tilt = function(direction) {
+  // debugger;
+  let amount;
+
+  if(direction  === 'left') {
+    amount = -20
+  } else {
+    amount = 40;
+  }
+
+  this.$node.css({ transition: "transform 0.5s",
+    transform:  "rotate(" + amount + "deg)" });
+
+  let that = this;
+  setTimeout(() => {
+    // debugger;
+    that.tilt(!direction ? 'left' : '');
+  }, 500);
+  // debugger;
+  // if(direction === 'left') {
+  //   this.$node.animate({
+  //     "rotation-point":"50% 50%",
+  //     "rotation":"180deg"
+  //   }, 3000, () => {
+  //     // this.tilt('left');
+  //   });
+  // }
 };
 
 Dancer.prototype.setPosition = function(top, left) {
