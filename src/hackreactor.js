@@ -1,3 +1,4 @@
+var loopAudio = new Audio('tracks/mainTrack.wav');
 var BEAT_TIME = (60 / 143.1) * 1000;
 
 let getRandomColor = function() {
@@ -25,6 +26,9 @@ let fadeDivOut = function(){
 };
 
 fadeDivIn();
+loopAudio.load();
+loopAudio.play();
+
 
 
 
