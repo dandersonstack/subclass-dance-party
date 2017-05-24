@@ -27,7 +27,7 @@ let fadeDivOut = function(){
 
 fadeDivIn();
 loopAudio.load();
-// loopAudio.play();
+loopAudio.play();
 
 
 
