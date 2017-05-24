@@ -5,24 +5,25 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  height: 100%;
 }
 img {
-    position: absolute;
-    z-index: 5;
-    height: 100px;
-    width: 100px;
+  position: absolute;
+  z-index: 5;
+  height: 100px;
+  width: 100px;
 
-    /*border: 1px solid;*/
+  /*border: 1px solid;*/
 }
 .kenny {
-    width: 200px;
-    /*border: 1px solid;*/
+  width: 200px;
+  /*border: 1px solid;*/
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 a:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -61,7 +62,6 @@ body {
     padding: none;
     position: absolute;
     background-color: white;
-    width: 100%;
     height: 100%;
 }
 
@@ -99,21 +99,21 @@ body {
   border:3px solid black;
   margin: 100px;
   position: absolute;
-    left: -85px;
-    top: 20px;
+  left: -85px;
+  top: 20px;
   background: darkred;
 }
 
 
 #speaker-left {
-    position: absolute;
-    left: 20px;
-    top: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 #speaker-right {
-    position: absolute;
-    right: 20px;
-    top: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 

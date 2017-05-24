@@ -11,6 +11,4 @@ Kenny.prototype.constructor = BlinkyDancer;
 
 Kenny.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  // this.oldStep();
-  // this.$node.toggle();
 };
