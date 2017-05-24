@@ -5,18 +5,19 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  height: 100%;
 }
 img {
-    position: absolute;
-    z-index: 5;
-    height: 100px;
-    width: 100px;
+  position: absolute;
+  z-index: 5;
+  height: 100px;
+  width: 100px;
 
-    /*border: 1px solid;*/
+  /*border: 1px solid;*/
 }
 .kenny {
-    width: 200px;
-    /*border: 1px solid;*/
+  width: 200px;
+  /*border: 1px solid;*/
 }
 
 .cartman {
@@ -24,10 +25,10 @@ img {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 a:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -37,10 +38,11 @@ body, a:link, a:visited, a:active{
   float:right;
 }
 #hackReactor-name {
-    width:1000px;
-    margin: auto;
+    width:700px;
+    margin: 120px;
     margin-top: 100px;
-    font-size: 9em;
+    font-size: 7em;
+    padding-right:115px;
     padding-left: 115px;
 
 }
@@ -66,18 +68,9 @@ body {
     padding: none;
     position: absolute;
     background-color: white;
-    width: 100%;
     height: 100%;
 }
 
-.eecs-text {
-    position: fixed;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
 .speaker {
   border-radius: 12px;
   height: 200px;
@@ -104,21 +97,21 @@ body {
   border:3px solid black;
   margin: 100px;
   position: absolute;
-    left: -85px;
-    top: 20px;
+  left: -85px;
+  top: 20px;
   background: darkred;
 }
 
 
 #speaker-left {
-    position: absolute;
-    left: 20px;
-    top: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 #speaker-right {
-    position: absolute;
-    right: 20px;
-    top: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 

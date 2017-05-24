@@ -83,20 +83,33 @@ $(document).ready(function() {
   });
 
   $('.addBreakDancerButton').on('click', function(event) {
-    debugger;
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    if(window.dancers.length > 11) {
+      alert("There are no more BreakDancers to Server You.");
+    } else {
+      var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
-    // get the maker function for the kind of dancer we're supposed to make
-    var dancerMakerFunction = window[dancerMakerFunctionName];
+      // get the maker function for the kind of dancer we're supposed to make
+      var dancerMakerFunction = window[dancerMakerFunctionName];
 
-    // make a dancer with a random position
-    var dancer = new dancerMakerFunction(
-      ($(window).innerHeight() * Math.random()),
-      ($(window).innerWidth() * Math.random()),
-      tickSpeed
-    );
-    $('body').append(dancer.$node);
-    window.dancers.push(dancer);
+      // make a dancer with a random position
+      var dancer = new dancerMakerFunction(
+        380 + (Math.random() * 120),
+        window.dancers.length * 94,
+        tickSpeed
+      );
+      $('body').append(dancer.$node);
+      window.dancers.push(dancer);
+    }
   });
+
+  $('.lineUpBreakDancersButton').on('click', function(event) {
+    let top = 500;
+    let left = 0;
+    window.dancers.forEach(dancer =>  {
+      dancer.lineUp(left, top);
+      left += 90;
+    });
+  });
+
 });
 
