@@ -89,7 +89,7 @@ $(document).ready(function() {
       // make a dancer with a random position
       var dancer = new dancerMakerFunction(
         380 + (Math.random() * 120),
-        window.dancers.length * 90,
+        window.dancers.length * 94,
         tickSpeed
       );
       $('body').append(dancer.$node);
