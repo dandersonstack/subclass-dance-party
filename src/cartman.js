@@ -1,7 +1,7 @@
 var Cartman = function(top, left, timeBetweenSteps) {
   //this.oldStep = Dancer.prototype.step;
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<img src="img/cartman.png"/>');
+  this.$node = $('<img src="img/cartman.png" class="cartman"/>');
   this.setPosition(top,left);
 };
 

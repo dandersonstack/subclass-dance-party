@@ -58,8 +58,7 @@ $(document).ready(function() {
   });
 
   $('.addDancerButton').on('click', function(event) {
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-      // make a dancer with a random position
+
     let makeObj = function(functionName) {
       return new window[functionName](
         $("body").height() * Math.random(),
@@ -69,7 +68,13 @@ $(document).ready(function() {
     };
 
     let cartman = makeObj('Cartman');
+    cartman.$node.on('mouseover', (event) => {
+      debugger
+      event.target.hidden = true;
+    });
+
     let kenny = makeObj('Kenny');
+
 
     $('body').append(cartman.$node, kenny.$node);
 
