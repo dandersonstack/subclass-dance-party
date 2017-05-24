@@ -50,15 +50,6 @@ Dancer.prototype.tilt = function(direction) {
     // debugger;
     that.tilt(!direction ? 'left' : '');
   }, 500);
-  // debugger;
-  // if(direction === 'left') {
-  //   this.$node.animate({
-  //     "rotation-point":"50% 50%",
-  //     "rotation":"180deg"
-  //   }, 3000, () => {
-  //     // this.tilt('left');
-  //   });
-  // }
 };
 
 Dancer.prototype.setPosition = function(top, left) {

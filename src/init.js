@@ -4,17 +4,55 @@ $(document).ready(function() {
 
   let tickSpeed = 500;
 
-  let offset = 0;
-  let topCircle = $('.top-circle');
+  $('.killKennyButton').on('click', function(event) {
 
-  $('.lineUpDancersButton').on('click', function(event) {
-    let top = 25,
+    window.dancersSouthpark.forEach(dancerObj => {
+      let kenny = dancerObj['kenny'].$node;
+      dancerObj['cartman'].$node.animate({
+        left: kenny.position().left + 50,
+        top: kenny.position().top + 30
+      }, 1000, () => {
+        kenny.fadeOut(() => {
+          kenny.top -= 250;
+          kenny.attr('src' , 'img/kenny-angel.png');
+          kenny.fadeIn(() => {
+            kenny.animate({
+              "top" : 0,
+              "opacity" : 0
+            }, 'slow');
+          });
+        });
+      });
+    });
+
+  });
+
+  $('.lineUpDancersButton').on('click', function() {
+
+    let calculateLeft = function(left) {
+      if(left >= $(window).width() - 200) {
+        return 25;
+      } else {
+        return left;
+      }
+    };
+
+    let top = 50,
       left = 25;
     window.dancersSouthpark.forEach(dancerObj =>  {
       dancerObj['cartman'].lineUp(left, top);
       left += 100;
+      left = calculateLeft(left);
+      if(left === 25) {
+        top += 200;
+      }
+
       dancerObj['kenny'].lineUp(left, top);
       left += 200;
+      left = calculateLeft(left);
+      if(left === 25) {
+        top += 200;
+      }
 
     });
   });
