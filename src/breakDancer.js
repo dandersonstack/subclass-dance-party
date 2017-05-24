@@ -28,6 +28,19 @@ BreakDancer.prototype.switchImage = function() {
   //this.$node = $('<img src="' + this.images[this.currImage] + '"/>');
 };
 
+BreakDancer.prototype.lineUp = function(left, top) { // expects a jquery element
+
+  this.$node.animate({
+    // opacity: 0.25,
+    left: left,
+    top: top
+    // height: "toggle"
+  }, 2000, () => {
+    console.log("about to try to make something be still here");
+  });
+
+};
+
 
 
 
